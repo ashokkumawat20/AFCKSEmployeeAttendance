@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="in.afckstechnologies.employeeattendance.activity.EmployeeAttendanceActivity">
+
+    <!-- Header aligned to top -->
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_medium"
+            android:background="#223458"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/logoImg"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/spacing_medium"
+                android:layout_weight=".2"
+                android:background="@drawable/logo_afcks"
+                android:padding="5dp"
+                android:paddingBottom="@dimen/spacing_medium" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:layout_weight=".8"
+                android:gravity="left|center|center_horizontal"
+                android:paddingLeft="@dimen/spacing_medium"
+                android:text="Employee Attendance"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/l1"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Spinner
+                android:id="@+id/spinnerMonth"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight=".3"
+                android:background="@drawable/custom_spinner_background"
+                android:popupBackground="@color/white"
+                android:spinnerMode="dialog"
+                android:textColor="@android:color/black" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_weight=".7"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight=".3"
+                        android:background="@color/bg_spnner"
+                        android:gravity="center"
+                        android:text="Leave"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".8"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/leaveApply"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_weight=".4"
+                            android:background="#223458"
+                            android:text="Apply"
+                            android:textAllCaps="false"
+                            android:textColor="#ffffff"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/leaveApplied"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight=".4"
+                            android:background="#223458"
+                            android:text="Status"
+                            android:textAllCaps="false"
+                            android:textColor="#ffffff"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Footer aligned to bottom -->
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/l2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_medium"
+            android:layout_marginRight="@dimen/spacing_medium"
+            android:layout_marginBottom="@dimen/spacing_large"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/enteryAttendance"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight=".5"
+                android:background="#4CAF50"
+                android:gravity="center"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/existAttendance"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_weight=".5"
+                android:background="#FF5722"
+                android:gravity="center"
+                android:text="Logout"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <!-- Scrollable Item below header and above footer -->
+
+    <LinearLayout
+        android:id="@+id/scrollableContents"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/footer"
+        android:layout_below="@id/header"
+        android:layout_marginLeft="@dimen/spacing_medium"
+        android:layout_marginRight="@dimen/spacing_medium"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/showAllLeave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:gravity="center"
+            android:textColor="@color/textcolor"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/employeeAttendanceList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingTop="8dp"
+            android:paddingBottom="70dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/employeeLeaveList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingTop="8dp"
+            android:paddingBottom="70dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</RelativeLayout>
